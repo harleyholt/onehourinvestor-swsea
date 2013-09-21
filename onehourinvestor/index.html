@@ -3,6 +3,7 @@
 	<head>
 		<title>One Hour Investor</title>
 		<script src="js/jquery.js"></script>
+		<script src="js/index.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -18,12 +19,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">One Hour Investor</a>
+					<a class="navbar-brand" href="/">One Hour Investor</a>
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#">Home</a>
+							<a href="/">Home</a>
 						</li>
 						<li>
 							<a href="#about">About</a>
@@ -38,25 +39,19 @@
 
 		<div class="container">
 			<div class="starter-template">
-				<h1></h1>
+				<h1>Learn now. Invest now</h1>
 				<p class="lead">
-					<h1>Learn now. Invest now.</h1>
-					<br />
 					<span id="signup-prompt">Sign up to receive an invitation when we launch.</span>
-					<br />
-					<form action="/i-am-interested" method="post">
-						<div class="form-group">
-							<input type="text" placeholder="Email" id="email-signup" class="form-control" name="email" />
-							<button type="submit" class="btn btn-default">
-								Sign up
-							</button>
-						</div>
-					</form>
-					<br />
-					<div>
-						<iframe width="420" height="315" src="//www.youtube.com/embed/_71voiOlGUk?autohide=1&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+					<div class="form-group" id="signup-form">
+						<input type="text" placeholder="Email" id="email-signup" class="form-control" name="email" />
+						<button class="btn btn-default btn-signup">
+							Sign up
+						</button>
 					</div>
 				</p>
+				<div>
+					<iframe width="600" height="450" src="//www.youtube.com/embed/_71voiOlGUk?autohide=1&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div><!-- /.container -->
 	</body>
