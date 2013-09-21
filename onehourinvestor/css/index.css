@@ -23,3 +23,7 @@ body {
 #signup-prompt {
 	font-style: italic;
 }
+
+#right-col {
+	margin-top: 40px;
+}

@@ -4,12 +4,12 @@ window.onload = function() {
 
 function signup() {
     var emailAddress = $("#email-signup").val();
-    
+
     $.post("/i-am-interested", {
         email : emailAddress
     }).done(function(data) {
     });
-    
+
     $("#signup-prompt").html("Thanks for signing up!");
     $("#email-signup").remove();
     $(".btn-signup").remove();
