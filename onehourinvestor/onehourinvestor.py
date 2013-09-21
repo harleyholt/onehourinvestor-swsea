@@ -13,7 +13,7 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
 
-        template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+        template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render({}))
 
 
