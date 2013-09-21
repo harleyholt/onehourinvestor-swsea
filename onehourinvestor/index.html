@@ -4,9 +4,9 @@
 		<title>One Hour Investor</title>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 
 	<body>
@@ -38,13 +38,24 @@
 
 		<div class="container">
 			<div class="starter-template">
-				<h1>Bootstrap starter template</h1>
+				<h1></h1>
 				<p class="lead">
-					Use this document as a way to quickly start any new project.
-					<br>
-					<iframe width="420" height="315" src="//www.youtube.com/embed/_71voiOlGUk?autohide=1&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-					<br>
-					All you get is this text and a mostly barebones HTML document.
+					<h1>Learn now. Invest now.</h1>
+					<br />
+					<span id="signup-prompt">Sign up to receive an invitation when we launch.</span>
+					<br />
+					<form action="/i-am-interested" method="post">
+						<div class="form-group">
+							<input type="text" placeholder="Email" id="email-signup" class="form-control" name="email" />
+							<button type="submit" class="btn btn-default">
+								Sign up
+							</button>
+						</div>
+					</form>
+					<br />
+					<div>
+						<iframe width="420" height="315" src="//www.youtube.com/embed/_71voiOlGUk?autohide=1&showinfo=0&controls=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</p>
 			</div>
 		</div><!-- /.container -->

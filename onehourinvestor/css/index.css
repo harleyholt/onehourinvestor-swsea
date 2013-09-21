@@ -6,3 +6,20 @@ body {
 	padding: 40px 15px;
 	text-align: center;
 }
+
+#email-signup {
+	display: inline;
+	width: 300px;
+}
+
+.form-group {
+	margin-top: 10px;	
+}
+
+.form-group .btn {
+	margin-left: 10px;
+}
+
+#signup-prompt {
+	font-style: italic;
+}
