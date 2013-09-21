@@ -30,7 +30,7 @@ class SignUpHelper(webapp2.RequestHandler):
         if not mail.is_email_valid(email_address):
             self.redirect('/')
         else:
-            sender_address = "One Hour Investor <harley@onehourinvestor.co>"
+            sender_address = "Interest Bot <interestbot@onehourinvestorswsea.appspotmail.com>"
             subject = "%s is intested!" % email_address
             body = ""
 
