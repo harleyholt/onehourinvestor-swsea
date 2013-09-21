@@ -8,7 +8,6 @@ function signup() {
     $.post("/i-am-interested", {
         email : emailAddress
     }).done(function(data) {
-        alert("Data Loaded: " + data);
     });
     
     $("#signup-prompt").html("Thanks for signing up!");
