@@ -30,14 +30,15 @@ class SignUpHelper(webapp2.RequestHandler):
         if not mail.is_email_valid(email_address):
             self.redirect('/')
         else:
-            sender_address = "Interest Bot <interestbot@onehourinvestorswsea.appspotmail.com>"
-            subject = "%s is intested!" % email_address
-            body = ""
+            sender_address = 'Interest Bot <interestbot@onehourinvestorswsea.appspotmail.com>'
+            receiver_address = 'onehourinvestor@gmail.com'
+            subject = '%s is intested!' % email_address
+            body = 'Nothing interesting to say about this?'
 
             try:
-                mail.send_mail(sender_address, email_address, subject, body)
+                mail.send_mail(sender_address, receiver_address, subject, body)
             except:
-                logging.error("Failed to send interest email to %s"
+                logging.error('Failed to send interest email to %s'
                               % email_address)
 
             self.redirect('/')
