@@ -20,19 +20,26 @@ $(document).ready(function() {
   }
   
   var friends = ko.observableArray([
-    getStatus(1, _defaultAvatar, 'Amy', 1021.21, 12019.89, -13.90),
-    getStatus(2, _defaultAvatar, 'John', 10.01, 11013.89, 12.10),
-    getStatus(0, _defaultAvatar, 'Jimmy', 9000.00, 10738.12, 3.13),
-    getStatus(3, _defaultAvatar, 'Malia', 214.96, 8951.88, -198.27),
-    getStatus(4, _defaultAvatar, 'Todd', 1.31, 7619.12, 90.12)
+    getStatus(1, '/images/avatars/woman1.gif', 'Amy', 1021.21, 12019.89, -13.90),
+    getStatus(2, '/images/avatars/man1.gif', 'John', 10.01, 11013.89, 12.10),
+    getStatus(0, '/images/avatars/man2.gif', 'Jimmy', 9000.00, 10738.12, 3.13),
+    getStatus(3, '/images/avatars/woman2.gif', 'Malia', 214.96, 8951.88, -198.27),
+    getStatus(4, '/images/avatars/woman3.gif', 'Veronica', 1.31, 7619.12, -13.02),
+    getStatus(5, '/images/avatars/man3.gif', 'Thad', 59.93, 6203.31, 5.12),
+    getStatus(6, '/images/avatars/man4.gif', 'Robert', 1021.75, 5213.55, -0.12),
+    getStatus(7, '/images/avatars/woman4.gif', 'Joanna', 0.31, 5209.02, -1391.61)
   ]);
 
   function getPerformance(name, symbol, change) {
-    return {
+    var temp = {
       name: ko.observable(name),
       symbol: ko.observable(symbol),
       change: ko.observable(change)
     }
+    temp.isNegative = ko.computed(function() {
+      return temp.change() < 0;
+    });
+    return temp;
   }
 
   var dailyPerformance = ko.observableArray([
