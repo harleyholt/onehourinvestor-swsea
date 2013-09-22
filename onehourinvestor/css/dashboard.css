@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 80px;
+}
+
 .status > div {
   display: inline-block;
   vertical-align: middle;
@@ -7,39 +11,64 @@
   padding: 5px;
 }
 
+
 .movement {
   font-weight: bold;
-}
-
-.status .movement {
   color: green;
 }
 
-.status.negative .movement {
+.negative .movement {
   color: red;
 }
 
-.status .negative-arrow {
+.negative-arrow {
   visibility: hidden;
   display: none;
 }
 
-.status.negative .negative-arrow {
+.negative .negative-arrow {
   visibility: visible;
   display: inline-block;
 }
 
-.status.negative .positive-arrow {
+.negative .positive-arrow {
   visibility: hidden;
   display: none;
+}
+
+#daily-performance {
+  padding: 5px 20px;
+}
+
+#daily-performance .performance {
+  display: inline-block;
+  width: 20%;
 }
 
 #social-leaderboard {
   -webkit-border-radius: 10px;
   border: 2px solid #ccc;
-  padding: 10px 5px;
+  padding: 10px 5px 10px 10px;
   display: inline-block;
-  min-width: 250px;
+}
+
+#social-leaderboard .position {
+  font-size: 32px;
+}
+
+#social-leaderboard .first .position {
+  font-weight: bold;
+  color: #FFCC33;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #CC9933;
+}
+
+#portfolio .number {
+  text-align: right;
+}
+
+#chart1 {
+  margin-left: -36px;
 }
 
 #chart1 svg {
