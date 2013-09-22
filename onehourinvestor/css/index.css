@@ -69,3 +69,17 @@ body {
 	width: 400px;
 	margin-top: 20px;
 }
+
+.status {
+	font-size: 20pt;
+}
+
+.money-add {
+	position: absolute;
+	left: 45%;
+	top: 80%;
+	font-size: 40pt;
+	display: none;
+	color: blue;
+	z-index: 10;
+}

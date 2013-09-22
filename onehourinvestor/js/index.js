@@ -1,8 +1,12 @@
+var progress = 10;
+var money = 1000;
+
 window.onload = function() {
     $(".btn-signup").click(signup);
     $(".list-group-item").mousedown(choose);
     $(".btn-submit").click(answer);
     $(".btn-submit").attr("disabled", "disabled");
+    $(".status").html("$" + money);
 };
 
 function signup() {
@@ -31,13 +35,44 @@ function choose() {
 }
 
 function answer() {
-    if ($(".active.list-group-item.active").hasClass("correct")) {
-        $("#answer-space").html("Correct!");
+    if ($(".active .list-group-item.active").hasClass("correct")) {
+        $(".active .answer-space").html("Correct!");
+        money += 1000;
+        $(".status").html("$" + money);
+
+        $(".money-add").html("+$1000");
+        $(".money-add").show();
+        $(".money-add").css({
+            "opacity" : "1",
+            "color" : "blue"
+        });
+        $(".money-add").animate({
+            top : "-=100px",
+            opacity : 0
+        }, "slow", function() {
+            $(".money-add").css("top", "80%");
+        });
     } else {
-        $("#answer-space").html("Wrong!");
+        $(".active .answer-space").html("Wrong!");
+        money -= 100;
+        $(".status").html("$" + money);
+
+        $(".money-add").html("-$100");
+        $(".money-add").show();
+        $(".money-add").css({
+            "opacity" : "1",
+            "color" : "red"
+        });
+        $(".money-add").animate({
+            top : "-=100px",
+            opacity : 0
+        }, "slow", function() {
+            $(".money-add").css("top", "80%");
+        });
     }
     $(".active .btn-submit").attr('disabled', 'disabled');
     $(".active .list-group-item").unbind("mousedown");
-    $(".percent").html("20%");
-    $(".progress-bar").width("20%");
+    progress += 10;
+    $(".percent").html(progress + "%");
+    $(".progress-bar").width(progress + "%");
 }
