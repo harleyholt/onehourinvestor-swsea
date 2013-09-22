@@ -58,7 +58,7 @@
 
 <div class="row">
   <div class="col-md-8">
-    <h3>My Portfolio</h3>
+    <h3>My Portfolio</h3> 
     <table id="portfolio" class="table">
       <thead>
         <th>Symbol</th>
@@ -67,6 +67,7 @@
         <th class="number">Quantity</th>
         <th class="number">Price</th>
         <th class="number">%</th>
+        <th></th>
       </thead>
       <tbody data-bind="foreach: portfolio">
         <tr>
@@ -76,9 +77,11 @@
           <td class="number" data-bind="text: quantity"></td>
           <td class="number" data-bind="text: value"></td>
           <td class="number" data-bind="text: percentPortfolio() + '%'"></td>
+          <td><button>Sell</button></td>
         </tr>
       </tbody>
     </table>
+    <a href="/user/jimmy/research">Go research and buy</a>
   </div>
   <div class="social col-md-4">
     <h3>My Friends</h3>
