@@ -72,6 +72,7 @@ function answer() {
     }
     $(".active .btn-submit").attr('disabled', 'disabled');
     $(".active .list-group-item").unbind("mousedown");
+    
     progress += 10;
     $(".percent").html(progress + "%");
     $(".progress-bar").width(progress + "%");
