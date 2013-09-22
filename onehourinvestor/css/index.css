@@ -26,11 +26,21 @@ body {
 	padding-bottom: 0px;
 }
 
-#right-col {
+#text-col {
 	margin-top: 40px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 #example, #signup-prompt {
 	font-size: 12pt;
-	margin: 0px;	
+	margin: 0px;
+}
+
+.screenie-col {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
