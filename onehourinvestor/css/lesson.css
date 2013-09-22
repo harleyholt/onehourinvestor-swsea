@@ -50,7 +50,7 @@
 }
 
 .carousel-inner, .carousel, .item {
-	height: 450px;
+	height: 550px;
 }
 
 .item .list-group, .input-group {
@@ -58,10 +58,20 @@
 	margin-top: 30px;
 }
 
-.list-group-item, .input-group {
+.item .list-group .picture {
+	width: 200px;
+	display: inline-block;
+}
+
+.item .list-group-item, .input-group {
 	width: 400px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.input-group {
+	width: 400px;
 }
 
 .btn-submit {
@@ -86,4 +96,17 @@
 
 .subtitle {
 	margin-top: 0px;
+}
+
+.answer-space {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.icon {
+	height: 150px;
+	width: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -1,0 +1,43 @@
+.close-btn {
+	float: right;
+	margin: 7px;
+}
+
+#chat-container {
+	float: left;
+	height: 248px;
+	display: none;
+}
+
+#chat-friends {
+	width: 100px;
+	float: left;
+}
+
+#chat-container > .panel {
+	width: 200px;
+	height: 100%;
+	float: left;
+	padding: 0px;
+}
+
+.panel-body {
+	padding: 0px;
+}
+
+#messages {
+	margin-top: 5px;
+	height: 170px;
+	margin-bottom: 5px;
+	padding: 10px;
+}
+
+.teacher {
+	background-color: yellow;
+}
+
+#name {
+	margin-left: 5px;
+	margin-top: 5px;
+	display: inline-block;
+}
