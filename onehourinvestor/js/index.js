@@ -2,11 +2,16 @@ var progress = 10;
 var money = 1000;
 
 window.onload = function() {
+    $(".left").hide();
     $(".btn-signup").click(signup);
     $(".list-group-item").mousedown(choose);
     $(".btn-submit").click(answer);
     $(".btn-submit").attr("disabled", "disabled");
     $(".status").html("$" + money);
+
+    $(".right").click(function(){
+        $(".right").hide();
+    });
 };
 
 function signup() {
@@ -72,8 +77,14 @@ function answer() {
     }
     $(".active .btn-submit").attr('disabled', 'disabled');
     $(".active .list-group-item").unbind("mousedown");
-    
+
     progress += 10;
     $(".percent").html(progress + "%");
     $(".progress-bar").width(progress + "%");
+
+    $(".right").show();
+    if (progress == 30) {
+        $(".left").show();
+        $(".right").unbind("click");
+    }
 }

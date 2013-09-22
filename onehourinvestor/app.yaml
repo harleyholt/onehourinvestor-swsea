@@ -7,7 +7,7 @@ threadsafe: false
 handlers:
 - url: /css
   static_dir: css
-- url: /font
+- url: /fonts
   static_dir: fonts
 - url: /js
   static_dir: js

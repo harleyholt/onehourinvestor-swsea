@@ -43,7 +43,10 @@ body {
 
 .carousel-control.left, .carousel-control.right {
 	background-image: none;
-	background-color: green;
+	background-color: white;
+	opacity: 1;
+	width: 50px;
+	color: black;
 }
 
 .carousel {
@@ -72,6 +75,7 @@ body {
 
 .status {
 	font-size: 20pt;
+	border: 0px;
 }
 
 .money-add {
