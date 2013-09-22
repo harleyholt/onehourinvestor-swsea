@@ -37,7 +37,7 @@
 	font-size: 18pt;
 }
 
-.carousel-control.left, .carousel-control.right {
+.carousel .carousel-control.left, .carousel .carousel-control.right {
 	background-image: none;
 	background-color: white;
 	opacity: 1;
@@ -53,7 +53,7 @@
 	height: 500px;
 }
 
-.list-group {
+.item .list-group {
 	box-shadow: none;
 	margin-top: 30px;
 }
@@ -82,8 +82,4 @@
 	display: none;
 	color: blue;
 	z-index: 10;
-<<<<<<< HEAD:onehourinvestor/css/index.css
 }
-=======
-}
->>>>>>> 8c2f9c19e278a4f069e9039ff2921471f792a82f:onehourinvestor/css/lesson.css

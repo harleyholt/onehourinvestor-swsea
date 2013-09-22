@@ -3,15 +3,22 @@
 	padding: 10px;
 }
 
-.navbar, .navbar-inverted {
-  background-color: #cccccc; /* background color will be black for all browsers */
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
-  border: none;
-  color: black;
+.navbar {
+	background-color: #cccccc;
+	background-image: none;
+	background-repeat: no-repeat;
+	filter: none;
+	border: none;
+}
+
+.navbar a {
+	color: black;
 }
 
 body {
 	padding-top: 50px;
+}
+
+body, input, button, select, textarea, .navbar-search .search-query, h1, h2, h3, h4 {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

@@ -57,6 +57,7 @@ function answer() {
         }, "slow", function() {
             $(".money-add").css("top", "80%");
         });
+        $(".money-add").hide();
     } else {
         $(".active .answer-space").html("Wrong!");
         money -= 100;
@@ -74,6 +75,7 @@ function answer() {
         }, "slow", function() {
             $(".money-add").css("top", "80%");
         });
+        $(".money-add").hide();
     }
     $(".active .btn-submit").attr('disabled', 'disabled');
     $(".active .list-group-item").unbind("mousedown");
