@@ -6,6 +6,7 @@ window.onload = function() {
     $(".btn-signup").click(signup);
     $(".list-group-item").mousedown(choose);
     $(".btn-submit").click(answer);
+    $(".btn-check").click(check);
     $(".btn-submit").attr("disabled", "disabled");
     $(".status").html("$" + money);
 
@@ -40,7 +41,41 @@ function choose() {
 }
 
 function answer() {
-    if ($(".active .list-group-item.active").hasClass("correct")) {
+    validate($(".active .list-group-item.active").hasClass("correct"));
+
+    $(".active .btn-submit").attr('disabled', 'disabled');
+    $(".active .list-group-item").unbind("mousedown");
+
+    progress += 10;
+    $(".percent").html(progress + "%");
+    $(".progress-bar").width(progress + "%");
+
+    $(".right").show();
+    if (progress == 30) {
+        $(".left").show();
+        $(".right").unbind("click");
+    }
+}
+
+function check() {
+    if ($("#googleq").val() == "898.39") {
+        validate(true);
+        $(".active .answer-space").html("<span class=\"alert alert-success\">Correct!</span>");
+        $("#googleq").attr('disabled', 'disabled');
+        $(".active .btn").attr('disabled', 'disabled');
+        
+        progress += 10;
+        $(".percent").html(progress + "%");
+        $(".progress-bar").width(progress + "%");
+
+    } else {
+        validate(false);
+        $(".active .answer-space").html("<span class=\"alert alert-danger\">Incorrect! Try again.</span>");
+    }
+}
+
+function validate(correct) {
+    if (correct) {
         $(".active .answer-space").html("<span class=\"alert alert-success\">Correct!</span>");
         money += 1000;
         $(".status").html("$" + money);
@@ -81,18 +116,5 @@ function answer() {
         }, "slow", function() {
             $("#money-add").css("top", "80%");
         });
-    }
-
-    $(".active .btn-submit").attr('disabled', 'disabled');
-    $(".active .list-group-item").unbind("mousedown");
-
-    progress += 10;
-    $(".percent").html(progress + "%");
-    $(".progress-bar").width(progress + "%");
-
-    $(".right").show();
-    if (progress == 30) {
-        $(".left").show();
-        $(".right").unbind("click");
     }
 }

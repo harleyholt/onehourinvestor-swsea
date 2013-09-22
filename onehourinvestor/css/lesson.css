@@ -46,19 +46,19 @@
 }
 
 .carousel {
-	padding: 50px;
+	padding: 30px;
 }
 
 .carousel-inner, .carousel, .item {
-	height: 500px;
+	height: 450px;
 }
 
-.item .list-group {
+.item .list-group, .input-group {
 	box-shadow: none;
 	margin-top: 30px;
 }
 
-.list-group-item {
+.list-group-item, .input-group {
 	width: 400px;
 	margin-left: auto;
 	margin-right: auto;
@@ -82,4 +82,8 @@
 	display: none;
 	color: blue;
 	z-index: 10;
+}
+
+.subtitle {
+	margin-top: 0px;
 }
