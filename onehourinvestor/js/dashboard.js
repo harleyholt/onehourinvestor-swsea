@@ -49,9 +49,39 @@ $(document).ready(function() {
       getPerformance('Apple', 'AAPL', -3.68)
   ]);
 
+  function getHolding(name, symbol, quantity, value, change, percentPortfolio) {
+    var temp = {
+      name: ko.observable(name),
+      symbol: ko.observable(symbol),
+      quantity: ko.observable(quantity),
+      value: ko.observable(value),
+      change: ko.observable(change),
+      percentPortfolio: ko.observable(percentPortfolio)
+    };
+    temp.isNegative = ko.computed(function() {
+      return temp.change() < 0;
+    });
+    temp.totalValue = ko.computed(function() {
+      return (temp.value() * temp.quantity()).toFixed(2);
+    });
+    
+    return temp;
+  }
+
+  var portfolio = ko.observableArray([
+      getHolding('Netflix Inc.', 'NFLX', 18, 313.83, 1.31, 22),
+      getHolding('NVIDIA Corporation', 'NVDA', 34, 15.83, 9.35, 8),
+      getHolding('IBM', 'IBM',  8, 190.21, -0.91, 12),
+      getHolding('Apple', 'AAPL', 8, 467.76, -3.68, 13),
+      getHolding('Dell Inc.', 'DELL', 45, 13.88, 0.92, 18),
+      getHolding('Alphatec Holdings Inc', 'ATEC', 102, 2.01, 0.04, 6),
+      getHolding('SkyNet', 'T3K', 24, 239.12, 42.99, 21)
+  ]);
+
   var dashboardViewModel = {
     friends: friends,
-    performance: dailyPerformance
+    performance: dailyPerformance,
+    portfolio: portfolio
   };
 
   ko.applyBindings(dashboardViewModel);
@@ -86,8 +116,8 @@ $(document).ready(function() {
 
     nv.utils.windowResize(chart.update);
 
-  return chart;
-});
+    return chart;
+  });
 
 
 });

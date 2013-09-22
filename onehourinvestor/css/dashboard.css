@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 80px;
+}
+
 .status > div {
   display: inline-block;
   vertical-align: middle;
@@ -57,6 +61,14 @@
   color: #FFCC33;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #CC9933;
+}
+
+#portfolio .number {
+  text-align: right;
+}
+
+#chart1 {
+  margin-left: -36px;
 }
 
 #chart1 svg {

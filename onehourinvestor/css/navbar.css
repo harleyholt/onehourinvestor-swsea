@@ -16,9 +16,13 @@
 }
 
 body {
-	padding-top: 50px;
+	padding-top: 60px;
 }
 
 body, input, button, select, textarea, .navbar-search .search-query, h1, h2, h3, h4 {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.message-404 > h2 {
+  line-height: 1.8;
 }

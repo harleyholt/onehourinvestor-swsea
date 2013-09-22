@@ -37,8 +37,17 @@ class DashboardHandler(webapp2.RequestHandler):
         self.response.write(template.render({}))
 
 
+def handle_404(request, response, exception):
+    response.headers['Content-Type'] = 'text/html'
+
+    template = JINJA_ENVIRONMENT.get_template('404.html')
+    response.write(template.render({}))
+
+
 application = webapp2.WSGIApplication([
     ('/', MainPage),
     ('/user/jimmy/lesson/beginner', LessonHandler),
     ('/user/jimmy', DashboardHandler)
 ], debug=True)
+
+application.error_handlers[404] = handle_404

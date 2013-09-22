@@ -42,6 +42,11 @@
     </div>
   </div>
 </script>
+<h2>My Exchange</h2>
+<div class="row">
+  <div id="daily-performance" data-bind="template: {foreach: performance, name: 't-daily-performance'}">
+  </div>
+</div>
 
 <div class="row">
   <div>
@@ -52,13 +57,28 @@
 </div>
 
 <div class="row">
-  <div id="daily-performance" data-bind="template: {foreach: performance, name: 't-daily-performance'}">
-  </div>
-</div>
-
-<div class="row">
   <div class="col-md-8">
-    testing
+    <h3>My Portfolio</h3>
+    <table id="portfolio" class="table">
+      <thead>
+        <th>Symbol</th>
+        <th>Company</th>
+        <th class="number">Balance</th>
+        <th class="number">Quantity</th>
+        <th class="number">Price</th>
+        <th class="number">%</th>
+      </thead>
+      <tbody data-bind="foreach: portfolio">
+        <tr>
+          <td data-bind="text: symbol"></td>
+          <td data-bind="text: name"></td>
+          <td class="number" data-bind="text: '$' + totalValue()"></td>
+          <td class="number" data-bind="text: quantity"></td>
+          <td class="number" data-bind="text: value"></td>
+          <td class="number" data-bind="text: percentPortfolio() + '%'"></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <div class="social col-md-4">
     <h3>My Friends</h3>
@@ -66,6 +86,7 @@
     </div>
   </div>
 </div>
+
 
 
 <script type="text/javascript">
