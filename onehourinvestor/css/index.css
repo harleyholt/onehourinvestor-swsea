@@ -31,3 +31,12 @@ body {
 #right-col {
 	margin-top: 40px;
 }
+
+.progress {
+	height: 35px;
+}
+
+.percent {
+	width: auto;
+	font-size: 18pt;
+}
