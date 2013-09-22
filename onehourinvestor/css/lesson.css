@@ -1,7 +1,3 @@
-body {
-	padding-top: 50px;
-}
-
 .starter-template {
 	text-align: center;
 	padding-top: 10px;
@@ -86,4 +82,8 @@ body {
 	display: none;
 	color: blue;
 	z-index: 10;
+<<<<<<< HEAD:onehourinvestor/css/index.css
 }
+=======
+}
+>>>>>>> 8c2f9c19e278a4f069e9039ff2921471f792a82f:onehourinvestor/css/lesson.css
