@@ -110,3 +110,7 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+a.btn-redirect {
+	font-size: 40pt;
+}

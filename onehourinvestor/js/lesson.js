@@ -1,4 +1,4 @@
-var progress = 10;
+var progress = 25;
 var money = 1000;
 
 window.onload = function() {
@@ -46,7 +46,7 @@ function answer() {
     $(".active .btn-submit").attr('disabled', 'disabled');
     $(".active .list-group-item").unbind("mousedown");
 
-    progress += 10;
+    progress += 25;
     $(".percent").html(progress + "%");
     $(".progress-bar").width(progress + "%");
 
@@ -63,11 +63,13 @@ function check() {
         $(".active .answer-space").html("<span class=\"alert alert-success\">Correct!</span>");
         $("#googleq").attr('disabled', 'disabled');
         $(".active .btn").attr('disabled', 'disabled');
-        
-        progress += 10;
+
+        progress += 25;
         $(".percent").html(progress + "%");
         $(".progress-bar").width(progress + "%");
 
+        $(".right").show();
+        $(".left").show();
     } else {
         validate(false);
         $(".active .answer-space").html("<span class=\"alert alert-danger\">Incorrect! Try again.</span>");
