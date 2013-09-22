@@ -32,7 +32,7 @@ body {
 	margin-top: 40px;
 }
 
-.progress {
+.progress.progress-striped {
 	height: 35px;
 }
 
@@ -86,18 +86,4 @@ body {
 	display: none;
 	color: blue;
 	z-index: 10;
-}
-
-.navbar-brand {
-	margin: 0px;
-	padding: 10px;
-}
-
-.navbar, .navbar-inverted {
-  background-color: #cccccc; /* background color will be black for all browsers */
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
-  border: none;
-  color: black;
 }
