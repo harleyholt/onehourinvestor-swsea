@@ -4,11 +4,11 @@ body {
 
 .starter-template {
 	text-align: center;
-  padding-top: 10px;
+	padding-top: 10px;
 }
 
 #signup-container {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 #email-signup {
@@ -17,7 +17,7 @@ body {
 }
 
 .form-group {
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 
 .form-group .btn {
@@ -39,4 +39,33 @@ body {
 .percent {
 	width: auto;
 	font-size: 18pt;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+	background-color: green;
+}
+
+.carousel {
+	padding: 50px;
+}
+
+.carousel-inner, .carousel, .item {
+	height: 500px;
+}
+
+.list-group {
+	box-shadow: none;
+	margin-top: 30px;
+}
+
+.list-group-item {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn-submit {
+	width: 400px;
+	margin-top: 20px;
 }
