@@ -1,0 +1,55 @@
+.status > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.status .avatar {
+  padding: 5px;
+}
+
+.movement {
+  font-weight: bold;
+}
+
+.status .movement {
+  color: green;
+}
+
+.status.negative .movement {
+  color: red;
+}
+
+.status .negative-arrow {
+  visibility: hidden;
+  display: none;
+}
+
+.status.negative .negative-arrow {
+  visibility: visible;
+  display: inline-block;
+}
+
+.status.negative .positive-arrow {
+  visibility: hidden;
+  display: none;
+}
+
+#social-leaderboard {
+  -webkit-border-radius: 10px;
+  border: 2px solid #ccc;
+  padding: 10px 5px;
+  display: inline-block;
+  min-width: 250px;
+}
+
+#chart1 svg {
+  height: 300px;
+  min-width: 100px;
+  min-height: 100px;
+/*
+  margin: 50px;
+  Minimum height and width is a good idea to prevent negative SVG dimensions...
+  For example width should be =< margin.left + margin.right + 1,
+  of course 1 pixel for the entire chart would not be very useful, BUT should not have errors
+*/
+}
