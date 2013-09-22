@@ -69,13 +69,14 @@ $(document).ready(function() {
   }
 
   var portfolio = ko.observableArray([
-      getHolding('Netflix Inc.', 'NFLX', 18, 313.83, 1.31, 22),
+      getHolding('Google Inc.', 'GOOG', 6, 903.11, 4.72, 17),
+      getHolding('The Coca-Cola Company.', 'KO', 10, 39.40, 0.09, 5),
+      getHolding('Netflix Inc.', 'NFLX', 18, 313.83, 1.31, 18),
       getHolding('NVIDIA Corporation', 'NVDA', 34, 15.83, 9.35, 8),
-      getHolding('IBM', 'IBM',  8, 190.21, -0.91, 12),
-      getHolding('Apple', 'AAPL', 8, 467.76, -3.68, 13),
+      getHolding('IBM', 'IBM',  8, 190.21, -0.91, 13),
+      getHolding('Apple', 'AAPL', 8, 467.76, -3.68, 15),
       getHolding('Dell Inc.', 'DELL', 45, 13.88, 0.92, 18),
-      getHolding('Alphatec Holdings Inc', 'ATEC', 102, 2.01, 0.04, 6),
-      getHolding('SkyNet', 'T3K', 24, 239.12, 42.99, 21)
+      getHolding('Alphatec Holdings Inc', 'ATEC', 102, 2.01, 0.04, 6)
   ]);
 
   var dashboardViewModel = {
