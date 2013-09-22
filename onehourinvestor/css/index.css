@@ -1,0 +1,36 @@
+body {
+	padding-top: 50px;
+}
+
+#signup-container {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#email-signup {
+	display: inline;
+	width: 300px;
+}
+
+.form-group {
+	margin-top: 10px;
+}
+
+.form-group .btn {
+	margin-left: 10px;
+}
+
+#signup-prompt {
+	font-style: italic;
+	padding-bottom: 0px;
+}
+
+#right-col {
+	margin-top: 40px;
+}
+
+#example, #signup-prompt {
+	font-size: 12pt;
+	margin: 0px;	
+}

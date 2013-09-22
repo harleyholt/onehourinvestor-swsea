@@ -1,8 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<script type="text/javascript">
-	$("#nav1").addClass("active");
-</script>
+<script type="text/javascript">$("#nav1").addClass("active");</script>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<div id="signup-container">
+	<div>
+		<img src="/images/tradeninjaofficial.png" alt=""/>
+		<h3>Simply taught, important to know</h3>
+	</div>
+	<p class="lead">
+		<span id="signup-prompt">Sign up to receive an invitation when we launch.</span>
+		<br />
+		<span id="example">In the meantime, feel free to browse our example interface.</span>
+		<div class="form-group" id="signup-form">
+			<input type="text" placeholder="Email" id="email-signup" class="form-control" name="email" />
+			<button class="btn btn-default btn-signup">
+				Sign up
+			</button>
+		</div>
+	</p>
+</div>
+<div id="right-col" class="col-lg-4">
+	<p>
+		<strong>One Hour Investor</strong> is a set of easy to understand videos that will the basics of investing, how to manage your risk, how to do real market research and much more.
+	</p>
+	<p>
+		Our unique hands-on activities at the end of each video will get you investing by the end your session with the help of all the modern tools available on the web today.
+	</p>
+	<p>
+		Our course is modular and built around your needs, so you can complete sessions in short segments on your own time. Along with that we provide an active community of young and experienced investors, willing to help out, share experiences, and keep you accountable to your goals.
+	</p>
+</div>
+
 {% endblock %}
 
 {% block name %}Home{% endblock %}
