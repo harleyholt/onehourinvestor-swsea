@@ -75,11 +75,11 @@ body {
   margin-right: 20px;
 }
 
-#chart1 {
-  margin-left: -36px;
+#chart {
+  padding-right: 120px;
 }
 
-#chart1 svg {
+#chart svg {
   height: 300px;
   min-width: 100px;
   min-height: 100px;
